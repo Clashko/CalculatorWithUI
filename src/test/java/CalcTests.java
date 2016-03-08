@@ -12,18 +12,15 @@ public class CalcTests {
         a = 5000.55;
         b = 500.45;
     }
-
     @BeforeClass
     public static void setUpOnce() throws Exception {
         CalculatorUI.main(null);
 
     }
-
     @Before
     public void init() throws Exception {
         clicker.clear();
     }
-
     @Test
     public void testPlus() throws Exception {
         clicker.clear();
@@ -34,7 +31,6 @@ public class CalcTests {
         clicker.checkDoubleValue(a+b);
         Thread.sleep(1000);
     }
-
     @Test
     public void testMinus() throws Exception {
         clicker.clear();
@@ -45,7 +41,6 @@ public class CalcTests {
         clicker.checkDoubleValue(a-b);
         Thread.sleep(1000);
     }
-
     @Test
     public void testMultiply() throws Exception {
         clicker.clear();
@@ -56,7 +51,6 @@ public class CalcTests {
         clicker.checkDoubleValue(a*b);
         Thread.sleep(1000);
     }
-
     @Test
     public void testDivide() throws Exception {
         clicker.clear();
