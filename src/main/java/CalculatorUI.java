@@ -4,7 +4,7 @@ public class CalculatorUI extends javax.swing.JFrame {
     private double memoryValue=0;
     private String operation = "?";
     private boolean resultClick = false;
-
+    CalcFunctions calcFunc = new CalcFunctions();
     private CalculatorUI() {
         initComponents();
     }
@@ -430,25 +430,28 @@ public class CalculatorUI extends javax.swing.JFrame {
         }
         else secondValue = Double.valueOf(display.getText());
 
-
         if("+".equals(operation)){
-            display.setText((firstValue+secondValue)+"");
-            firstValue=(firstValue+secondValue);
+            double result = calcFunc.summer(firstValue,secondValue);
+            display.setText(String.valueOf(result));
+            firstValue=result;
             resultClick = true;
         }
         if("-".equals(operation)){
-            display.setText((firstValue-secondValue)+"");
-            firstValue=(firstValue-secondValue);
+            double result = calcFunc.diff(firstValue,secondValue);
+            display.setText(String.valueOf(result));
+            firstValue=result;
             resultClick = true;
         }
         if("*".equals(operation)){
-            display.setText((firstValue*secondValue)+"");
-            firstValue=(firstValue*secondValue);
+            double result = calcFunc.multi(firstValue,secondValue);
+            display.setText(String.valueOf(result));
+            firstValue=result;
             resultClick = true;
         }
         if("/".equals(operation)){
-            display.setText((firstValue/secondValue)+"");
-            firstValue=(firstValue/secondValue);
+            double result = calcFunc.divide(firstValue,secondValue);
+            display.setText(String.valueOf(result));
+            firstValue=result;
             resultClick = true;
         }
         operation = "?";
