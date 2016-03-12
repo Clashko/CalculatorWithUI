@@ -1,18 +1,17 @@
 public class CalcFunctions {
-
-        public Double summer(Double first, Double second){
-            return first+second;
+        public Double summer(Object first, Object second){
+            return Double.valueOf(first.toString())+Double.valueOf(second.toString());
         }
 
-        public Double diff(Double first, Double second){
-            return first-second;
+        public Double diff(Object first, Object second){
+            return Double.valueOf(first.toString())-Double.valueOf(second.toString());
         }
 
-        public Double multi(Double first, Double second){
-            return first*second;
+        public Double multi(Object first, Object second){
+            return Double.valueOf(first.toString())*Double.valueOf(second.toString());
         }
 
-        public Double divide(Double first, Double second){
-            return first/second;
+        public Double divide(Object first, Object second){
+            return Double.valueOf(first.toString())/Double.valueOf(second.toString());
         }
 }

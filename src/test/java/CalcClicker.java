@@ -49,7 +49,7 @@ public enum CalcClicker {
             }
             Thread.yield();
             if (System.currentTimeMillis() - start > 1000) {
-                throw new Exception("text to be thrown");
+                throw new Exception("Button not found");
             }
         }
         Thread.sleep(100);
