@@ -5,7 +5,7 @@ public class CalculatorUI extends javax.swing.JFrame {
     private String operation = "?";
     private boolean resultClick = false;
     CalcFunctions calcFunc = new CalcFunctions();
-    private CalculatorUI() {
+    public CalculatorUI() {
         initComponents();
     }
 
@@ -57,7 +57,6 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         cSum.setText("+");
-        cSum.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         cSum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cSumActionPerformed(evt);
@@ -128,7 +127,6 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         number6.setText("6");
-        number6.setToolTipText("");
         number6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number6ActionPerformed(evt);
@@ -475,42 +473,6 @@ public class CalculatorUI extends javax.swing.JFrame {
             display.setText(String.valueOf(memoryValue));
         }
 
-    }
-
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CalculatorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CalculatorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CalculatorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CalculatorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CalculatorUI().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify

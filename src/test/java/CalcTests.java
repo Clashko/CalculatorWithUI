@@ -1,14 +1,11 @@
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import junit.framework.Assert;
-
-import javax.swing.*;
 
 import static junit.framework.Assert.*;
 
 public class CalcTests {
-
+    // <editor-fold defaultstate="collapsed" desc="Init">
     private CalcClicker clicker = CalcClicker.INSTANCE;
     private double a;
     private double b;
@@ -20,14 +17,13 @@ public class CalcTests {
     }
     @BeforeClass
     public static void setUpOnce() throws Exception {
-        CalculatorUI.main(null);
-
+        Main.main(null);
     }
     @Before
     public void init() throws Exception {
         clicker.clear();
     }
-
+    //</editor-fold>
     // <editor-fold defaultstate="collapsed" desc="Test calculator buttons">
     @Test
     public void testPlus() throws Exception {
@@ -88,7 +84,6 @@ public class CalcTests {
         clicker.checkDoubleValue(500.5);
     }
     // </editor-fold>
-
     // <editor-fold defaultstate="collapsed" desc="Test calculator functions">
     @Test
     public void testSummerNULL() {
